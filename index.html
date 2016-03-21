@@ -21,7 +21,13 @@
  var localStream = null;
  function init() {
     console.log('Getting user media with constraints', constraints);
-    navigator.webkitGetUserMedia(constraints, handleUserMediaSuccess, handleUserMediaError);
+
+    navigator.getUserMedia_ = (   navigator.getUserMedia
+                           || navigator.webkitGetUserMedia
+                           || navigator.mozGetUserMedia
+                           || navigator.msGetUserMedia);
+
+    navigator.getUserMedia_(constraints, handleUserMediaSuccess, handleUserMediaError);
  };
  function handleUserMediaSuccess(stream) {
     console.log('[+] Successfully got local video stream!');
