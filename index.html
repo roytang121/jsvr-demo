@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
- <meta charset=“utf-8”>
+ <meta charset="utf-8">
  <title>Testing</title>
 </head>
 <body>
@@ -9,9 +9,9 @@
   <div id=‘videos’>
     <video id=‘localVideo’ autoplay muted></video>
   </div>
-  <input type=“button” value=“Make a toast” onClick=“showAndroidToast(‘Hello There’)” />
+  <input type="button" value="Make a toast" onClick="showAndroidToast(‘Hello There’)" />
 
-  <script type=“text/javascript”>
+  <script type="text/javascript">
 
  function showAndroidToast(msg) {
     Android.showToast(msg);
@@ -28,7 +28,7 @@
     attachMediaStream = function(element, stream) {
           element.src = window.webkitURL.createObjectURL(stream);
     };
-    attachMediaStream(document.getElementById(“localVideo”), stream);
+    attachMediaStream(document.getElementById("localVideo"), stream);
  };
  function handleUserMediaError(error) {
     alert(‘[!] getUserMedia error: ‘, error);
